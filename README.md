@@ -1,6 +1,25 @@
 # HttpClient
 
-**TODO: Add description**
+Make an http "GET" request to the specified url. The url should have
+a specified protocol (http or https).
+
+```
+iex> import HttpClient
+iex> url = URI.parse "http://example.com"
+iex> HttpClient.get url
+{:ok, 200, "..."}
+```
+
+Make an http "GET"request to the specified url using the given proxy.
+The url should have a specified protocol (http or https).
+
+```
+iex> import HttpClient
+iex> url = URI.parse "http://example.com"
+iex> proxy = URI.parse "123.456.789.1:8080"
+iex> HttpClient.get url, proxy
+{:ok, 200, "..."}
+```
 
 ## Installation
 
